@@ -26,7 +26,6 @@ cd app
 
 npm install
 
-node app.js
 ```
 
 8. Enter the 'instance ip:3000' into your browser to check the app is running.
@@ -83,3 +82,8 @@ sudo systemctl start mongod
 12. Use `source .bashrc` to reload the file
 13. cd into the app with `cd app` and then run `node seeds/seed.js`
 14. now run `node app.js` to launch the app and put your ip into the browser `'your ip'/posts` to get the posts page
+
+#
+# Two tier architecture diagram:
+
+node app.js![two-tier-architecture](https://user-images.githubusercontent.com/129315605/234062497-739c912f-89ad-4f6f-93e6-d540731ef5b4.png)
