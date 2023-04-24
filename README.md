@@ -86,4 +86,4 @@ sudo systemctl start mongod
 #
 # Two tier architecture diagram:
 
-node app.js![two-tier-architecture](https://user-images.githubusercontent.com/129315605/234062497-739c912f-89ad-4f6f-93e6-d540731ef5b4.png)
+![two-tier-architecture](https://user-images.githubusercontent.com/129315605/234062497-739c912f-89ad-4f6f-93e6-d540731ef5b4.png)
