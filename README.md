@@ -39,10 +39,10 @@ npm install
 ```
 server {
     listen 80;
-    server_name 'dynamic ip from database on aws site';
+    server_name 'dynamic ip from aws site'; # app ip or db ip?
 
     location / {
-        proxy_pass http://'db ip':3000;
+        proxy_pass http://'dynamic ip':3000; # app ip or db ip?
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -78,7 +78,7 @@ sudo systemctl start mongod
 8. Run the file with `./provisiondb.sh`
 9. Edit the mongod.conf file with `sudo nano /etc/mongod.conf` and change the bindip to 0.0.0.0 then save the file
 10. Restart mongod with `sudo systemctl restart mongod` and then `sudo systemctl enable mongod`
-11. Over in the App instance, edit the .bashrc file and add `export DB_HOST=mongodb://'your database ip':27017/posts` to the bottom of the file then save the file
+11. Over in the App instance, edit the .bashrc file and add `export DB_HOST=mongodb://'your DATABASE ip':27017/posts` to the bottom of the file then save the file
 12. Use `source .bashrc` to reload the file
 13. cd into the app with `cd app` and then run `node seeds/seed.js`
 14. now run `node app.js` to launch the app and put your ip into the browser `'your ip'/posts` to get the posts page
